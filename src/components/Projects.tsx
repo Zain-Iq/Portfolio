@@ -74,7 +74,8 @@ const Projects = () => {
         'Registered guests through an HTTP API endpoint',
         'Stored attendee name and email data in DynamoDB'
       ],
-      github: 'https://github.com/Zain-Iq/StudentPrediction',
+      github: '#',
+      codeUnavailable: true,
       demo: null,
       images: ['assets/Architecture%20diagram.png', 'assets/MyParty.png', 'assets/CodeMyParty.png'],
       imageScales: [1, 1, 1],
@@ -95,8 +96,7 @@ const Projects = () => {
         'Compared Random Forest and SVM using test metrics and cross-validation',
         'Used feature importance and model metrics to explain tradeoffs'
       ],
-      github: '#',
-      codeUnavailable: true,
+      github: 'https://github.com/Zain-Iq/StudentPrediction',
       demo: null,
       images: [
         'assets/StudentPrediction/StudentPrediction.png',
