@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const repoName = "portfolio";
+const repoName = "Portfolio";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   assetPrefix: `/${repoName}/`,
   images: {
     unoptimized: true,
+  },
+  turbopack: {
+    root: process.cwd(),
   },
 };
 
