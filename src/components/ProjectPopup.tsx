@@ -481,11 +481,15 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
               <div className="space-y-3">
                 {project.codeUnavailable ? (
                   <span
-                    className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm font-semibold text-zinc-500"
+                    className="group flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm font-semibold text-zinc-500"
                     title="Code unavailable"
                     aria-label="Code unavailable"
                   >
-                    <ExternalLink size={16} /> Code unavailable
+                    <ExternalLink size={16} />
+                    <span>Code</span>
+                    <span className="hidden text-xs font-medium text-zinc-600 group-hover:inline group-focus:inline">
+                      Unavailable
+                    </span>
                   </span>
                 ) : (
                   <a

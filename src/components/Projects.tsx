@@ -313,12 +313,15 @@ const Projects = () => {
                 </button>
                 {project.codeUnavailable ? (
                   <span
-                    className="flex cursor-not-allowed items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 text-sm font-semibold text-zinc-500"
+                    className="group flex cursor-not-allowed items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 text-sm font-semibold text-zinc-500"
                     title="Code unavailable"
                     aria-label="Code unavailable"
                   >
                     <Github size={16} />
-                    Code unavailable
+                    <span>Code</span>
+                    <span className="hidden text-xs font-medium text-zinc-600 group-hover:inline group-focus:inline">
+                      Unavailable
+                    </span>
                   </span>
                 ) : (
                   <a
