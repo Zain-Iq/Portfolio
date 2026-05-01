@@ -137,7 +137,7 @@ const About = () => {
 
           {/* Who I Am - Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-            {/* Image Placeholder */}
+            {/* About Image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -145,16 +145,12 @@ const About = () => {
               viewport={{ once: true }}
               className="flex items-center justify-center"
             >
-              <div className="w-full max-w-md h-96 bg-zinc-800 rounded-lg flex items-center justify-center border-2 border-dashed border-zinc-600">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-zinc-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-zinc-400 text-lg">Your Photo Here</p>
-                  <p className="text-zinc-500 text-sm mt-2">Upload your image to /public/assets/</p>
-                </div>
+              <div className="w-full max-w-md h-96 overflow-hidden rounded-lg border border-zinc-700 bg-zinc-800 shadow-lg shadow-black/20">
+                <img
+                  src="/assets/linkedin.jpg"
+                  alt="Portrait of Zain"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </motion.div>
 

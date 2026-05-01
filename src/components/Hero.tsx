@@ -32,6 +32,7 @@ const Hero = () => {
                 'IT support specialist',
                 'QA automation specialist',
                 'Cloud solutions builder',
+                'AI enthusiast',
               ]}
               multiTextDelay={1000}
               typeSpeed={25}
@@ -40,7 +41,7 @@ const Hero = () => {
             />
           </div>
           <p className="text-lg text-zinc-400 mb-12 max-w-2xl mx-auto">
-            I build practical applications using React, TypeScript, Python, C#, SQL, and cloud tools, with experience in testing, automation, and improving real workflows.
+            I solve problems by building practical applications using React, TypeScript, Python, C#, SQL, and cloud tools, with experience in testing, automation, and improving real workflows 😁.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
