@@ -88,6 +88,104 @@ const Projects = () => {
       ]
     },
     {
+      name: 'Student Performance Prediction',
+      description: 'Supervised machine learning project for identifying academically at-risk students',
+      tech: ['Python', 'Pandas', 'Scikit-learn', 'Random Forest', 'SVM', 'GridSearchCV'],
+      impact: [
+        'Built an early-warning classification workflow without grade leakage',
+        'Compared Random Forest and SVM using test metrics and cross-validation',
+        'Used feature importance and model metrics to explain tradeoffs'
+      ],
+      github: '#',
+      codeUnavailable: true,
+      demo: null,
+      images: [
+        'assets/StudentPrediction/StudentPrediction.png',
+        'assets/StudentPrediction/StudentPrediction2.png',
+        'assets/StudentPrediction/StudentPrediction3.png',
+        'assets/StudentPrediction/StudentPrediction4.png',
+        'assets/StudentPrediction/StudentPrediction5.png',
+        'assets/StudentPrediction/StudentPrediction6.png',
+        'assets/StudentPrediction/StudentPrediction7.png',
+        'assets/StudentPrediction/StudentPrediction8.png',
+        'assets/StudentPrediction/StudentPrediction9.png'
+      ],
+      details: [
+        'Used the UCI Student Performance dataset to predict whether students were academically at risk.',
+        'Created a binary target from final grade G3, treating students with G3 below 10 as at risk.',
+        'Removed G1, G2, and G3 from the feature set to avoid grade leakage and better simulate an early-warning model.',
+        'Compared Random Forest and Support Vector Machine models with hyperparameter tuning, cross-validation, and classification metrics.'
+      ],
+      detailSections: [
+        {
+          title: 'Overview',
+          description:
+            'This project explored whether academic, demographic, social, and behavioural features could help identify students who may need support before final grades are known.'
+        },
+        {
+          title: 'Dataset & preprocessing',
+          items: [
+            'Used student-mat.csv from the UCI Student Performance dataset with 395 rows and 33 columns.',
+            'Checked the dataset for missing values and found none.',
+            'Encoded categorical features for model training.',
+            'Used an 80/20 stratified train/test split to preserve the pass/fail class balance.',
+            'Applied StandardScaler for SVM training.'
+          ]
+        },
+        {
+          title: 'Model comparison',
+          items: [
+            'Trained a baseline Random Forest model, then tuned n_estimators, max_depth, and min_samples_split with GridSearchCV.',
+            'Trained a baseline RBF-kernel SVM, then tuned C, gamma, and kernel with GridSearchCV.',
+            'Evaluated both models using accuracy, precision, recall, F1-score, ROC-AUC, confusion matrices, learning curves, and 5-fold cross-validation.',
+            'Used Random Forest feature importance to identify which inputs were most influential.'
+          ]
+        },
+        {
+          title: 'Conclusion',
+          description:
+            'Random Forest was selected as the stronger implementation because it performed better on the held-out test set, had stronger ROC-AUC, was easier to interpret, and required less sensitive preprocessing. SVM remained competitive in cross-validation, but it was less interpretable and weaker on the final test set.'
+        }
+      ],
+      resultGroups: [
+        {
+          name: 'Random Forest',
+          metrics: [
+            { label: 'Accuracy', value: '68.35%' },
+            { label: 'Precision', value: '71.21%' },
+            { label: 'Recall', value: '88.68%' },
+            { label: 'F1 Score', value: '78.99%' },
+            { label: 'ROC-AUC', value: '0.6437' },
+            { label: 'CV F1 Mean', value: '0.7884' },
+            { label: 'CV F1 Std', value: '0.0379' }
+          ]
+        },
+        {
+          name: 'SVM',
+          metrics: [
+            { label: 'Accuracy', value: '65.82%' },
+            { label: 'Precision', value: '68.06%' },
+            { label: 'Recall', value: '92.45%' },
+            { label: 'F1 Score', value: '78.40%' },
+            { label: 'ROC-AUC', value: '0.6118' },
+            { label: 'CV F1 Mean', value: '0.8147' },
+            { label: 'CV F1 Std', value: '0.0214' }
+          ]
+        }
+      ],
+      findings: [
+        'Both models were better at identifying passing students than failing students.',
+        'The most important challenge was improving detection of genuinely at-risk students.',
+        'Random Forest offered the best balance of held-out performance and interpretability.'
+      ],
+      limitations: [
+        'Replace LabelEncoder with OneHotEncoder and ColumnTransformer for categorical features.',
+        'Define the target directly as at_risk = 1 so metrics align more clearly with the project goal.',
+        'Wrap SVM preprocessing and training in a full scikit-learn Pipeline to avoid scaling leakage during cross-validation.',
+        'Explore class weighting, SMOTE, threshold tuning, SHAP/LIME explanations, and additional models such as Logistic Regression, Gradient Boosting, or XGBoost.'
+      ]
+    },
+    {
       name: 'VHubs',
       description: 'C# Vehicle Inventory Management System',
       tech: ['C#', '.NET', 'Database Management'],

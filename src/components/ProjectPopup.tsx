@@ -22,6 +22,20 @@ export type ProjectPopupItem = {
   images: string[];
   imageScales?: number[];
   details: string[];
+  detailSections?: {
+    title: string;
+    description?: string;
+    items?: string[];
+  }[];
+  resultGroups?: {
+    name: string;
+    metrics: {
+      label: string;
+      value: string;
+    }[];
+  }[];
+  findings?: string[];
+  limitations?: string[];
 };
 
 interface ProjectPopupProps {
@@ -326,6 +340,22 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                 )}
               </div>
 
+              {project.detailSections?.map((section) => (
+                <div key={section.title} className="rounded-3xl border border-zinc-800 bg-zinc-900 p-5 sm:p-6">
+                  <h3 className="mb-3 text-lg font-semibold text-white">{section.title}</h3>
+                  {section.description && (
+                    <p className="leading-relaxed text-zinc-300">{section.description}</p>
+                  )}
+                  {section.items && (
+                    <ul className="mt-4 list-inside list-disc space-y-2 text-zinc-300">
+                      {section.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+
             </div>
 
             <div className="min-w-0 space-y-6">
@@ -357,6 +387,51 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                   ))}
                 </ul>
               </div>
+
+              {project.resultGroups && (
+                <div className="rounded-3xl border border-zinc-800 bg-zinc-900 p-5 sm:p-6">
+                  <h3 className="mb-4 text-lg font-semibold text-white">Results</h3>
+                  <div className="space-y-4">
+                    {project.resultGroups.map((group) => (
+                      <div key={group.name} className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-4">
+                        <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-400">
+                          {group.name}
+                        </h4>
+                        <div className="mt-4 grid grid-cols-2 gap-3">
+                          {group.metrics.map((metric) => (
+                            <div key={`${group.name}-${metric.label}`} className="rounded-xl bg-zinc-900 p-3">
+                              <p className="text-xs text-zinc-500">{metric.label}</p>
+                              <p className="mt-1 text-lg font-semibold text-white">{metric.value}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {project.findings && (
+                <div className="rounded-3xl border border-zinc-800 bg-zinc-900 p-5 sm:p-6">
+                  <h3 className="mb-3 text-lg font-semibold text-white">Key findings</h3>
+                  <ul className="list-inside list-disc space-y-2 text-zinc-300">
+                    {project.findings.map((finding) => (
+                      <li key={finding}>{finding}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.limitations && (
+                <div className="rounded-3xl border border-zinc-800 bg-zinc-900 p-5 sm:p-6">
+                  <h3 className="mb-3 text-lg font-semibold text-white">Limitations & improvements</h3>
+                  <ul className="list-inside list-disc space-y-2 text-zinc-300">
+                    {project.limitations.map((limitation) => (
+                      <li key={limitation}>{limitation}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               <div className="space-y-3">
                 {project.codeUnavailable ? (
