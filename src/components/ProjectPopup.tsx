@@ -9,6 +9,8 @@ import {
   SearchX,
   ChevronLeft,
   ChevronRight,
+  Minus,
+  Plus,
 } from 'lucide-react';
 
 export type ProjectPopupItem = {
@@ -45,6 +47,9 @@ interface ProjectPopupProps {
 }
 
 const VISIBLE_THUMBNAILS = 4;
+const MIN_ZOOM = 1.25;
+const MAX_ZOOM = 3;
+const ZOOM_STEP = 0.25;
 
 const formatImageLabel = (src: string) =>
   decodeURIComponent(src.split('/').pop() ?? 'Project image')
@@ -55,6 +60,7 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
   const [activeImage, setActiveImage] = useState(0);
   const [zoomed, setZoomed] = useState(false);
   const [zoomOrigin, setZoomOrigin] = useState({ x: '50%', y: '50%' });
+  const [zoomLevel, setZoomLevel] = useState(MIN_ZOOM);
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const pointerStart = useRef<{ x: number; y: number } | null>(null);
@@ -76,6 +82,7 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
 
   const resetZoom = () => {
     setZoomed(false);
+    setZoomLevel(MIN_ZOOM);
     setZoomOrigin({ x: '50%', y: '50%' });
     setPanOffset({ x: 0, y: 0 });
     setDragging(false);
@@ -91,7 +98,13 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
     resetZoom();
   };
 
-  const clampPan = (value: number) => Math.max(-120, Math.min(120, value));
+  const clampZoom = (value: number) => Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, value));
+  const clampPan = (value: number) => Math.max(-260, Math.min(260, value));
+
+  const updateZoomLevel = (value: number) => {
+    setZoomed(true);
+    setZoomLevel(clampZoom(value));
+  };
 
   const handlePointerDown = (event: ReactPointerEvent<HTMLImageElement>) => {
     if (!zoomed) return;
@@ -132,11 +145,12 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      onClick={() => {
-        onClose();
-        setActiveImage(0);
-        setZoomed(false);
-      }}
+        onClick={() => {
+          onClose();
+          setActiveImage(0);
+          setZoomed(false);
+          setZoomLevel(MIN_ZOOM);
+        }}
     >
       <motion.div
         className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-2xl"
@@ -150,6 +164,7 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
             onClose();
             setActiveImage(0);
             setZoomed(false);
+            setZoomLevel(MIN_ZOOM);
           }}
           className="absolute right-4 top-4 z-30 rounded-full bg-zinc-950/90 p-1 text-zinc-400 hover:text-white"
           aria-label="Close project details"
@@ -195,9 +210,38 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                           <SearchX size={14} />
                           <span>Zoom out</span>
                         </button>
-                        <div className="absolute right-3 top-3 z-20 flex items-center gap-2 rounded-full bg-black/70 px-3 py-2 text-xs text-zinc-300">
-                          <Hand size={14} />
-                          <span>{dragging ? 'Dragging image' : 'Hold & drag to pan'}</span>
+                        <div className="absolute right-3 top-3 z-20 flex max-w-[calc(100%-1.5rem)] flex-wrap items-center justify-end gap-2 rounded-2xl bg-black/70 px-3 py-2 text-xs text-zinc-300">
+                          <button
+                            type="button"
+                            onClick={() => updateZoomLevel(zoomLevel - ZOOM_STEP)}
+                            className="rounded-full border border-white/10 p-1 text-zinc-300 transition hover:text-white"
+                            aria-label="Decrease zoom"
+                          >
+                            <Minus size={14} />
+                          </button>
+                          <input
+                            type="range"
+                            min={MIN_ZOOM}
+                            max={MAX_ZOOM}
+                            step={ZOOM_STEP}
+                            value={zoomLevel}
+                            onChange={(event) => updateZoomLevel(Number(event.target.value))}
+                            className="h-1 w-24 accent-teal-400"
+                            aria-label="Image zoom level"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => updateZoomLevel(zoomLevel + ZOOM_STEP)}
+                            className="rounded-full border border-white/10 p-1 text-zinc-300 transition hover:text-white"
+                            aria-label="Increase zoom"
+                          >
+                            <Plus size={14} />
+                          </button>
+                          <span className="min-w-9 text-right">{Math.round(zoomLevel * 100)}%</span>
+                          <span className="hidden items-center gap-1 sm:flex">
+                            <Hand size={14} />
+                            {dragging ? 'Dragging' : 'Drag to pan'}
+                          </span>
                         </div>
                       </>
                     )}
@@ -213,7 +257,7 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                         style={{
                           transformOrigin: `${zoomOrigin.x} ${zoomOrigin.y}`,
                           transform: `translate(${panOffset.x}px, ${panOffset.y}px) scale(${
-                            zoomed ? currentImageScale * 1.25 : currentImageScale
+                            zoomed ? currentImageScale * zoomLevel : currentImageScale
                           })`,
                         }}
                         onPointerDown={handlePointerDown}
@@ -230,6 +274,7 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
 
                           setPanOffset({ x: 0, y: 0 });
                           setZoomOrigin({ x: `${x}%`, y: `${y}%` });
+                          setZoomLevel(MIN_ZOOM);
                           setZoomed(true);
                         }}
                       />
