@@ -146,6 +146,7 @@ const Projects = () => {
         'Promotes cultural heritage through technology'
       ],
       github: 'https://github.com/Zain-Iq/DeeDesigns',
+      codeUnavailable: true,
       demo: null,
       images: ['assets/DeeDesigns1.png', 'assets/DeeDesigns2.png'],
       details: [
