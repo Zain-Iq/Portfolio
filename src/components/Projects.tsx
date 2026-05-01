@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import ProjectPopup, { ProjectPopupItem } from './ProjectPopup';
 
 const Projects = () => {
@@ -63,6 +63,28 @@ const Projects = () => {
         'Built FocusFlow in a team during a hackathon, pair-programming with mentors to ship quickly under tight deadlines.',
         'Integrated OpenAI-powered task breakdowns to help students organize assignments, quizzes, and exam prep into clearer next steps.',
         'Contributed to features like mood-based AI recommendations, a Pomodoro timer for focused study sessions, and a "Letter to Future Self" experience for reflection.'
+      ]
+    },
+    {
+      name: 'MyParty',
+      description: 'Serverless AWS party invitation registration system',
+      tech: ['AWS S3', 'API Gateway', 'Lambda', 'DynamoDB', 'CloudWatch'],
+      impact: [
+        'Hosted a static invitation page with S3',
+        'Registered guests through an HTTP API endpoint',
+        'Stored attendee name and email data in DynamoDB'
+      ],
+      github: '#',
+      codeUnavailable: true,
+      demo: null,
+      images: ['assets/Architecture%20diagram.png', 'assets/MyParty.png', 'assets/CodeMyParty.png'],
+      imageScales: [1, 1, 1],
+      details: [
+        'Built a simple party invitation web app using an AWS serverless stack deployed in the North Virginia region.',
+        'Used an S3 bucket to host the static frontend, with HTML, CSS, and JavaScript collecting guest name and email input.',
+        'Connected the frontend to API Gateway through an HTTP POST route, then used Lambda to handle registration logic and write records to a DynamoDB Users table.',
+        'Used CloudWatch logs to debug Lambda execution issues, and worked through CORS and permission challenges while connecting the AWS services.',
+        'Planned improvements included SNS email reminders and event scheduling so guests could choose available dates.'
       ]
     },
     {
