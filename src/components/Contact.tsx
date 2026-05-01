@@ -112,7 +112,9 @@ const Contact = () => {
               </a>
 
               <a
-                href="resume.pdf"
+                href="https://drive.google.com/file/d/1Ozg6a3GnnyI6wllZStzZp0-shFd7RcWF/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors"
               >
                 <div className="bg-zinc-700 p-2 rounded">
@@ -121,7 +123,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-zinc-300 font-medium">Download Resume</p>
+                  <p className="text-zinc-300 font-medium">View Resume</p>
                   <p className="text-zinc-400 text-sm">View my full resume</p>
                 </div>
               </a>

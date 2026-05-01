@@ -18,11 +18,12 @@ const Hero = () => {
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
             Zain Iqbal
           </h1>
-          <div className="text-xl sm:text-2xl text-zinc-300 mb-8 h-16 flex items-center">
+          <div className="text-xl sm:text-2xl text-zinc-300 mb-8 h-16 flex items-center justify-center text-center">
             <Typewriter
               textStyle={{
                 color: '#d4d4d8',
                 fontWeight: 400,
+                display: 'inline-block',
               }}
               startDelay={300}
               cursorColor="#d4d4d8"
@@ -51,7 +52,9 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="resume.pdf"
+              href="https://drive.google.com/file/d/1Ozg6a3GnnyI6wllZStzZp0-shFd7RcWF/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2"
             >
               <Download size={20} />

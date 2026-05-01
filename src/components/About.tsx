@@ -162,7 +162,7 @@ const About = () => {
               viewport={{ once: true }}
               className="flex flex-col justify-center"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Who I Am</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Hi, I'm Zain!</h3>
               <div className="space-y-4 text-zinc-300 leading-relaxed">
                 <p>
                   I am a Sheridan College Computer Science student focused on building reliable and useful software. My experience spans frontend development, backend logic, testing, technical support, cloud services, and workflow improvement.
@@ -262,9 +262,9 @@ const About = () => {
                   {/* Content Box */}
                   <div className={`w-full max-w-md ${exp.side === 'left' ? 'pr-8' : 'pl-8'}`}>
                     <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
-                      <div className="flex items-center justify-between mb-2">
+                      <div className="mb-3">
                         <h4 className="text-lg font-semibold text-white">{exp.title}</h4>
-                        <span className="text-sm text-zinc-400 bg-zinc-700 px-2 py-1 rounded">
+                        <span className="mt-2 inline-block text-sm text-zinc-400 bg-zinc-700 px-2 py-1 rounded">
                           {exp.period}
                         </span>
                       </div>
@@ -297,9 +297,9 @@ const About = () => {
 
                       <div className={`w-full ${exp.side === 'left' ? 'lg:max-w-[48%] lg:pr-8' : 'lg:max-w-[48%] lg:pl-8'}`}>
                         <div className="rounded-lg border border-zinc-700 bg-zinc-800 p-6">
-                          <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="mb-4">
                             <h4 className="text-lg font-semibold text-white">{exp.title}</h4>
-                            <span className="w-fit rounded bg-zinc-700 px-2 py-1 text-sm text-zinc-400">
+                            <span className="mt-2 inline-block rounded bg-zinc-700 px-2 py-1 text-sm text-zinc-400">
                               {exp.period}
                             </span>
                           </div>
