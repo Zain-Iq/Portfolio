@@ -314,11 +314,11 @@ const Projects = () => {
                 {project.codeUnavailable ? (
                   <span
                     className="flex cursor-not-allowed items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 text-sm font-semibold text-zinc-500"
-                    title="Code unavailable at this time"
-                    aria-label="Code unavailable at this time"
+                    title="Code unavailable"
+                    aria-label="Code unavailable"
                   >
                     <Github size={16} />
-                    Code unavailable at this time
+                    Code unavailable
                   </span>
                 ) : (
                   <a

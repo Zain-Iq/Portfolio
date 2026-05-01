@@ -482,10 +482,10 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                 {project.codeUnavailable ? (
                   <span
                     className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm font-semibold text-zinc-500"
-                    title="Code unavailable at this time"
-                    aria-label="Code unavailable at this time"
+                    title="Code unavailable"
+                    aria-label="Code unavailable"
                   >
-                    <ExternalLink size={16} /> Code unavailable at this time
+                    <ExternalLink size={16} /> Code unavailable
                   </span>
                 ) : (
                   <a
