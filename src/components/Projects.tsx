@@ -74,8 +74,7 @@ const Projects = () => {
         'Registered guests through an HTTP API endpoint',
         'Stored attendee name and email data in DynamoDB'
       ],
-      github: '#',
-      codeUnavailable: true,
+      github: 'https://github.com/Zain-Iq/StudentPrediction',
       demo: null,
       images: ['assets/Architecture%20diagram.png', 'assets/MyParty.png', 'assets/CodeMyParty.png'],
       imageScales: [1, 1, 1],
