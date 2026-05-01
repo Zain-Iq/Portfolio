@@ -21,7 +21,7 @@ const Projects = () => {
       github: 'https://github.com/Zain-Iq/DenQuest',
       codeUnavailable: true,
       demo: null,
-      images: ['/assets/denquest-1.png', '/assets/denquest-2.png'],
+      images: ['assets/denquest-1.png', 'assets/denquest-2.png'],
       details: [
         'Built a collaborative task management experience for shared households.',
         'Designed mobile workflows that keep chore ownership and accountability clear.',
@@ -40,7 +40,7 @@ const Projects = () => {
       github: 'https://github.com/Zain-Iq/MindGuard',
       codeUnavailable: true,
       demo: null,
-      images: ['/assets/mindguard-1.png', '/assets/mindguard-2.png'],
+      images: ['assets/mindguard-1.png', 'assets/mindguard-2.png'],
       details: [
         'Created an empathetic assistant designed to support mental wellness.',
         'Built adaptive conversation paths using AI-generated responses.',
@@ -76,7 +76,7 @@ const Projects = () => {
       ],
       github: 'https://github.com/Zain-Iq/VHubs',
       demo: null,
-      images: ['/assets/Vhubs1.png', '/assets/Vhubs2.png'],
+      images: ['assets/Vhubs1.png', 'assets/Vhubs2.png'],
       imageScales: [1, 1.12],
       details: [
         'Built a desktop-style vehicle inventory platform with strong data organization.',
@@ -96,17 +96,17 @@ const Projects = () => {
       github: 'https://github.com/Zain-Iq/CoolRooms',
       demo: null,
       images: [
-        '/assets/CoolRooms/Adding%20Invalid%20input.png',
-        '/assets/CoolRooms/Adding%20Valid%20input.png',
-        '/assets/CoolRooms/Clear%20all.png',
-        '/assets/CoolRooms/Display%20Roomboard.png',
-        '/assets/CoolRooms/Display%20Specific%20Room.png',
-        '/assets/CoolRooms/invalid%20choice.png',
-        '/assets/CoolRooms/Remove%20But%20One%20Invalid%20input.png',
-        '/assets/CoolRooms/Remove%20But%20One%20Valid%20input.png',
-        '/assets/CoolRooms/Removing%20Invalid%20input.png',
-        '/assets/CoolRooms/Removing%20Valid%20input.png',
-        '/assets/CoolRooms/Split.png'
+        'assets/CoolRooms/Adding%20Invalid%20input.png',
+        'assets/CoolRooms/Adding%20Valid%20input.png',
+        'assets/CoolRooms/Clear%20all.png',
+        'assets/CoolRooms/Display%20Roomboard.png',
+        'assets/CoolRooms/Display%20Specific%20Room.png',
+        'assets/CoolRooms/invalid%20choice.png',
+        'assets/CoolRooms/Remove%20But%20One%20Invalid%20input.png',
+        'assets/CoolRooms/Remove%20But%20One%20Valid%20input.png',
+        'assets/CoolRooms/Removing%20Invalid%20input.png',
+        'assets/CoolRooms/Removing%20Valid%20input.png',
+        'assets/CoolRooms/Split.png'
       ],
       details: [
         'Created a terminal-based reservation workflow with data persistence.',
@@ -125,7 +125,7 @@ const Projects = () => {
       ],
       github: 'https://github.com/Zain-Iq/DeeDesigns',
       demo: null,
-      images: ['/assets/DeeDesigns1.png', '/assets/DeeDesigns2.png'],
+      images: ['assets/DeeDesigns1.png', 'assets/DeeDesigns2.png'],
       details: [
         'Built an artist storefront with responsive product galleries.',
         'Translated client vision into polished UI and intuitive checkout flows.',

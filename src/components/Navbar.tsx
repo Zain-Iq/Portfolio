@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
-  const logoSrc = logoError ? '/file.svg' : '/my logo.PNG';
+  const logoSrc = logoError ? 'file.svg' : 'my logo.PNG';
 
   const navItems = [
     { name: 'Home', href: '#home' },

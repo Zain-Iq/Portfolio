@@ -112,7 +112,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="/resume.pdf"
+                href="resume.pdf"
                 className="flex items-center gap-4 p-4 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors"
               >
                 <div className="bg-zinc-700 p-2 rounded">

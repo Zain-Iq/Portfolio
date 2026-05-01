@@ -147,7 +147,7 @@ const About = () => {
             >
               <div className="w-full max-w-md h-96 overflow-hidden rounded-lg border border-zinc-700 bg-zinc-800 shadow-lg shadow-black/20">
                 <img
-                  src="/assets/linkedin.jpg"
+                  src="assets/linkedin.jpg"
                   alt="Portrait of Zain"
                   className="h-full w-full object-cover"
                 />
@@ -216,7 +216,7 @@ const About = () => {
                 >
                   <div className="group relative w-full max-w-md h-96 overflow-hidden rounded-lg border border-zinc-700 bg-zinc-800 shadow-lg shadow-black/20">
                     <img
-                      src="/assets/MyGremlins.jpg"
+                      src="assets/MyGremlins.jpg"
                       alt="My two cats relaxing together"
                       className="h-full w-full object-cover"
                     />

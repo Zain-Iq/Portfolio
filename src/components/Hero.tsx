@@ -51,7 +51,7 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="/resume.pdf"
+              href="resume.pdf"
               className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2"
             >
               <Download size={20} />

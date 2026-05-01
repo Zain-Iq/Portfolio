@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   const [logoError, setLogoError] = useState(false);
-  const logoSrc = logoError ? '/file.svg' : '/my logo.PNG';
+  const logoSrc = logoError ? 'file.svg' : 'my logo.PNG';
 
   return (
     <footer className="bg-black border-t border-zinc-800 py-8 mt-12">
