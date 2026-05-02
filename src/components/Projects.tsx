@@ -21,7 +21,7 @@ const Projects = () => {
       github: 'https://github.com/Zain-Iq/DenQuest',
       codeUnavailable: true,
       demo: null,
-      images: ['assets/denquest-1.png', 'assets/denquest-2.png'],
+      images: [],
       details: [
         'Built a collaborative task management experience for shared households.',
         'Designed mobile workflows that keep chore ownership and accountability clear.',
@@ -40,7 +40,7 @@ const Projects = () => {
       github: 'https://github.com/Zain-Iq/MindGuard',
       codeUnavailable: true,
       demo: null,
-      images: ['assets/mindguard-1.png', 'assets/mindguard-2.png'],
+      images: [],
       details: [
         'Created an empathetic assistant designed to support mental wellness.',
         'Built adaptive conversation paths using AI-generated responses.',
