@@ -286,10 +286,8 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                   </>
                 ) : (
                   <div className="flex h-[clamp(16rem,42vh,28rem)] flex-col items-center justify-center bg-zinc-950/60 p-6 text-center">
-                    <p className="text-lg font-semibold text-white">Screenshots coming soon</p>
-                    <p className="mt-2 max-w-md text-sm text-zinc-400">
-                      This project is ready to showcase now, and visuals can be added here once you have them.
-                    </p>
+                    <p className="text-lg font-semibold text-white">Screenshots unavailable</p>
+                    <p className="mt-2 text-sm text-zinc-400">Screenshots coming soon</p>
                   </div>
                 )}
               </div>
@@ -379,7 +377,7 @@ const ProjectPopup = ({ open, project, onClose }: ProjectPopupProps) => {
                 ) : (
                   <div className="mt-4 flex justify-center">
                     <span className="rounded-full border border-dashed border-zinc-700 px-3 py-1 text-xs text-zinc-400">
-                      Add screenshots later
+                      Screenshots coming soon
                     </span>
                   </div>
                 )}
