@@ -58,7 +58,17 @@ const Projects = () => {
       ],
       github: 'https://github.com/omariip/FocusFlow',
       demo: null,
-      images: [],
+      images: [
+        'assets/FocusFlow/FocusFlow.jpg',
+        'assets/FocusFlow/FocusFlow2.jpg',
+        'assets/FocusFlow/FocusFlow3.jpg',
+        'assets/FocusFlow/FocusFlow4.jpg',
+        'assets/FocusFlow/FocusFlow5.jpg',
+        'assets/FocusFlow/FocusFlow6.jpg',
+        'assets/FocusFlow/FocusFlow7.jpg',
+        'assets/FocusFlow/FocusFlow8.jpg',
+        'assets/FocusFlow/FocusFlow9.jpg'
+      ],
       details: [
         'Built FocusFlow in a team during a hackathon, pair-programming with mentors to ship quickly under tight deadlines.',
         'Integrated OpenAI-powered task breakdowns to help students organize assignments, quizzes, and exam prep into clearer next steps.',
