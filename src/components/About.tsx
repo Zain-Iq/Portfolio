@@ -8,9 +8,9 @@ const About = () => {
   const [showMoreExperience, setShowMoreExperience] = useState(false);
   const experiences = [
     {
-      title: "Finance/Admin & Donor Representative | Muslim Hands Canada",
+      title: "Admin & Donor Representative | Muslim Hands Canada",
       period: "Feb - Mar 2026",
-      description: "Recognized for strong performance and selected for admin responsibilities in Finance department, including documentation and cross-department coordination. Provided Tier 1 technical support for 30+ website users weekly, diagnosing front-end and backend issues, improving user experience and reducing support requests by 25%. Identified and proposed 5+ usability and performance enhancements for the organization's website, contributing to improved navigation and reduced user friction.",
+      description: "Recognized for strong performance and selected for admin responsibilities, including documentation and cross-department coordination. Provided Tier 1 technical support for 30+ website users weekly, diagnosing front-end and backend issues, improving user experience and reducing support requests by 25%. Identified and proposed 5+ usability and performance enhancements for the organization's website, contributing to improved navigation and reduced user friction.",
       side: "left"
     },
     {
