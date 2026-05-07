@@ -261,6 +261,25 @@ const Projects = () => {
         'Translated client vision into polished UI and intuitive checkout flows.',
         'Integrated backend flows for secure purchase and inventory handling.'
       ]
+    },
+    {
+      name: 'Home Monitoring System',
+      description: 'Python application using Flask and Immaggage API for real-time home security monitoring',
+      tech: ['Python', 'Flask', 'Immagga API', 'Raspberry Pi'],
+      impact: [
+        'Real-time home monitoring with image recognition',
+        'Integrates live camera feeds with cloud and local storage',
+        'Provides comprehensive monitoring solution for home security'
+      ],
+      github: 'https://github.com/Zain-Iq/Home-Monitoring-System',
+      codeUnavailable: true,
+      demo: null,
+      images: [],
+      details: [
+        'Built a Home monitoring app using Python, Flask, and the Immagga API for image recognition.',
+        'Passed real-time camera feeds to the Immagga API from a Raspberry Pi hosting the server to detect and classify objects in the home environment.',
+        'Integrated the live system with cloud(Firebase) and local database(SQLite) storage for image data and detection logs, creating a comprehensive monitoring solution.'
+      ]
     }
   ];
 
