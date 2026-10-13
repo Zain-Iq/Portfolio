@@ -8,22 +8,28 @@ const About = () => {
   const [showMoreExperience, setShowMoreExperience] = useState(false);
   const experiences = [
     {
+      title: "IT Support Specialist (Co-op) | S+C Partners",
+      period: "May - Aug 2026",
+      description: "Built an automated inventory and ticketing system with Power Automate, SharePoint, and other Microsoft tools so the IT team stayed current on stock, tickets, and company data. Diagnosed printer hardware issues through component testing, disassembly, and firmware updates. Provided technical support for hardware, software, and connectivity problems, and built and configured desktops and laptops through installations and updates. Assisted with remote troubleshooting using Threatlocker, Avanan, virtual desktops, and NinjaOne, and documented workstation setups and solutions to streamline future support.",
+      side: "left"
+    },
+    {
       title: "Admin & Donor Representative | Muslim Hands Canada",
       period: "Feb - Mar 2026",
       description: "Recognized for strong performance and selected for admin responsibilities, including documentation and cross-department coordination. Provided Tier 1 technical support for 30+ website users weekly, diagnosing front-end and backend issues, improving user experience and reducing support requests by 25%. Identified and proposed 5+ usability and performance enhancements for the organization's website, contributing to improved navigation and reduced user friction.",
-      side: "left"
+      side: "right"
     },
     {
       title: "QA & Development | Stallion Express",
       period: "May - Aug 2025",
       description: "Collaborated with QA and Dev teams to test and validate software features, reproduce and document bugs, and ensure quality releases across a Laravel-based platform. Conducted regression testing with API endpoints using Postman and end-to-end tests with Playwright. Improved frontend page design using Vue3 and CSS, and developed core custom validation rules in Laravel. Participated in daily standups and product reviews, contributing to CI/CD cycles and Git/GitHub workflows.",
-      side: "right"
+      side: "left"
     },
     {
       title: "Full Stack Developer | DeeDesigns",
       period: "Mar 2024 - June 2025",
       description: "Developed a responsive and modern front-end website for an independent Indigenous artist using ReactJS, CSS, and JavaScript. Conducted client meetings to gather requirements and refine design elements. Integrated a secure PHP backend with a relational database to handle purchasing workflows and data storage, ensuring reliability and security compliance.",
-      side: "left"
+      side: "right"
     }
   ];
   const additionalExperiences = [

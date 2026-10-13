@@ -24,7 +24,7 @@ const Skills = () => {
         },
         {
           title: 'Cloud & DevOps',
-          skills: ['AWS', 'Docker', 'Git', 'GitHub', 'CI/CD']
+          skills: ['AWS', 'Microsoft Azure', 'Docker', 'Git', 'GitHub', 'CI/CD']
         },
         {
           title: 'Testing & Tools',
@@ -43,19 +43,19 @@ const Skills = () => {
       categories: [
         {
           title: 'IT Support',
-          skills: ['Help Desk Support', 'Troubleshooting', 'Ticketing', 'Hardware Setup', 'User Support']
+          skills: ['Technical Support', 'Help Desk Support', 'Troubleshooting', 'Ticketing', 'Hardware Setup', 'User Support']
         },
         {
           title: 'Systems & Tools',
-          skills: ['Windows', 'Linux', 'MS Tools', 'Google Workspace', 'Remote Access Tools', 'VPN', 'Jira', 'Virtual Machines', 'Cloud Tools', 'SQL']
+          skills: ['Windows', 'Linux', 'SharePoint', 'MS Tools', 'Google Workspace', 'NinjaOne', 'Threatlocker', 'Datto Backup', 'Desktop Virtualization', 'Remote Access Tools', 'VPN', 'Jira', 'Virtual Machines', 'Cloud Tools', 'SQL']
         },
         {
           title: 'Scripting & Automation',
-          skills: ['Python', 'Bash', 'PowerShell', 'AI Tools']
+          skills: ['Python', 'Bash', 'PowerShell', 'Microsoft Power Automate', 'AI Tools']
         },
         {
           title: 'Administration',
-          skills: ['Account Setup', 'Permissions Support', 'Device Configuration', 'Software Installation']
+          skills: ['Group Policy', 'Account Setup', 'Permissions Support', 'Device Configuration', 'Software Installation']
         },
         {
           title: 'AI Platforms',
