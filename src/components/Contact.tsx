@@ -112,7 +112,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1Ozg6a3GnnyI6wllZStzZp0-shFd7RcWF/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1WUsg3RsMjle1-WY8T9lzo5du9zKHnInm/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors"

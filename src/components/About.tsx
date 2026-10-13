@@ -14,7 +14,7 @@ const About = () => {
       side: "left"
     },
     {
-      title: "IT Support Specialist (Co-op) | S+C Partners",
+      title: "IT Support Specialist | S+C Partners",
       period: "May - Aug 2026",
       description: "Built an automated inventory and ticketing system with Power Automate, SharePoint, and other Microsoft tools so the IT team stayed current on stock, tickets, and company data. Diagnosed printer hardware issues through component testing, disassembly, and firmware updates. Provided technical support for hardware, software, and connectivity problems, and built and configured desktops and laptops through installations and updates. Assisted with remote troubleshooting using Threatlocker, Avanan, virtual desktops, and NinjaOne, and documented workstation setups and solutions to streamline future support.",
       side: "right"
