@@ -52,7 +52,7 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="https://drive.google.com/file/d/1Ozg6a3GnnyI6wllZStzZp0-shFd7RcWF/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1WUsg3RsMjle1-WY8T9lzo5du9zKHnInm/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2"
