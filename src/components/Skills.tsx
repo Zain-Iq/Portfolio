@@ -16,11 +16,11 @@ const Skills = () => {
         },
         {
           title: 'Frontend',
-          skills: ['React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap']
+          skills: ['React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap', 'Front-End Design', 'Web Application Development']
         },
         {
           title: 'Backend & Databases',
-          skills: ['Node.js', 'Flask', 'DynamoDB', 'MySQL', 'SQLite', 'Firebase']
+          skills: ['Node.js', 'Flask', 'Supabase', 'DynamoDB', 'MySQL', 'SQLite', 'Firebase', 'Multi-factor Authentication']
         },
         {
           title: 'Cloud & DevOps',

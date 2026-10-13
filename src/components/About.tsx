@@ -8,28 +8,34 @@ const About = () => {
   const [showMoreExperience, setShowMoreExperience] = useState(false);
   const experiences = [
     {
-      title: "IT Support Specialist (Co-op) | S+C Partners",
-      period: "May - Aug 2026",
-      description: "Built an automated inventory and ticketing system with Power Automate, SharePoint, and other Microsoft tools so the IT team stayed current on stock, tickets, and company data. Diagnosed printer hardware issues through component testing, disassembly, and firmware updates. Provided technical support for hardware, software, and connectivity problems, and built and configured desktops and laptops through installations and updates. Assisted with remote troubleshooting using Threatlocker, Avanan, virtual desktops, and NinjaOne, and documented workstation setups and solutions to streamline future support.",
+      title: "Full Stack Developer | Marietta Massage",
+      period: "July 2025 - Present",
+      description: "Built a React and Tailwind website for an ocean-inspired massage practice so customers can learn about the business, review services and pricing, check hours, and request appointments. Worked with the owners to keep the experience clear for people with different levels of comfort using technology, and applied responsive design so the site works across devices. Developed a Supabase-backed appointment system with multi-factor authentication and an owner admin area for reviewing submissions, updating request status, and viewing bookings in a calendar.",
       side: "left"
     },
     {
-      title: "Admin & Donor Representative | Muslim Hands Canada",
-      period: "Feb - Mar 2026",
-      description: "Recognized for strong performance and selected for admin responsibilities, including documentation and cross-department coordination. Provided Tier 1 technical support for 30+ website users weekly, diagnosing front-end and backend issues, improving user experience and reducing support requests by 25%. Identified and proposed 5+ usability and performance enhancements for the organization's website, contributing to improved navigation and reduced user friction.",
+      title: "IT Support Specialist (Co-op) | S+C Partners",
+      period: "May - Aug 2026",
+      description: "Built an automated inventory and ticketing system with Power Automate, SharePoint, and other Microsoft tools so the IT team stayed current on stock, tickets, and company data. Diagnosed printer hardware issues through component testing, disassembly, and firmware updates. Provided technical support for hardware, software, and connectivity problems, and built and configured desktops and laptops through installations and updates. Assisted with remote troubleshooting using Threatlocker, Avanan, virtual desktops, and NinjaOne, and documented workstation setups and solutions to streamline future support.",
       side: "right"
+    },
+    {
+      title: "Admin & Donor Representative | Muslim Hands Canada",
+      period: "Feb - May 2026",
+      description: "Recognized for strong performance and selected for admin responsibilities, including documentation and cross-department coordination. Provided Tier 1 technical support for 30+ website users weekly, diagnosing front-end and backend issues, improving user experience and reducing support requests by 25%. Identified and proposed 5+ usability and performance enhancements for the organization's website, contributing to improved navigation and reduced user friction.",
+      side: "left"
     },
     {
       title: "QA & Development | Stallion Express",
       period: "May - Aug 2025",
       description: "Collaborated with QA and Dev teams to test and validate software features, reproduce and document bugs, and ensure quality releases across a Laravel-based platform. Conducted regression testing with API endpoints using Postman and end-to-end tests with Playwright. Improved frontend page design using Vue3 and CSS, and developed core custom validation rules in Laravel. Participated in daily standups and product reviews, contributing to CI/CD cycles and Git/GitHub workflows.",
-      side: "left"
+      side: "right"
     },
     {
       title: "Full Stack Developer | DeeDesigns",
       period: "Mar 2024 - June 2025",
       description: "Developed a responsive and modern front-end website for an independent Indigenous artist using ReactJS, CSS, and JavaScript. Conducted client meetings to gather requirements and refine design elements. Integrated a secure PHP backend with a relational database to handle purchasing workflows and data storage, ensuring reliability and security compliance.",
-      side: "right"
+      side: "left"
     }
   ];
   const additionalExperiences = [
@@ -177,7 +183,7 @@ const About = () => {
                   Beyond coding, I am a cat dad of 2 who enjoys playing sports and video games as hobbies. Initially, I started with wanting to create video games, but I realized my passion was strongly rooted in helping people. I would help people with technical problems, which then led me to wanting to create applications that do the same - solving real-world challenges and making technology more accessible.
                 </p>
                 <p>
-                  I enjoy creating software that is both functional and polished, and I am especially interested in internship opportunities where I can contribute to real products and continue growing as a developer.
+                  I enjoy creating software that is both functional and polished, and I am especially interested in opportunities where I can contribute to real products and continue growing as a developer.
                 </p>
               </div>
             </motion.div>
